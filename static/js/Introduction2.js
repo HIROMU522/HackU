@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function updateSaveButtonState() {
       let isAllFilled = true;
-      const requiredFields = [inputFields[0], inputFields[1], inputFields[6]]; // 1, 2, 7番目が必須
+      const requiredFields = [inputFields[0], inputFields[1], inputFields[2]]; 
       requiredFields.forEach(field => {
           if (!field.value) isAllFilled = false;
       });
