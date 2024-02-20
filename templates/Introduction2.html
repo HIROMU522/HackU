@@ -18,10 +18,17 @@
         <div class="closet">
           
           <div class="data-input"></div>
-          <div id="saveArea" class="saveArea"></div>
-          <div class="preview" id="imagePreview"></div>
+          <div id="saveArea" class="saveArea">
+            <!-- <img src="" alt="プレビュー画像" style="max-width: 100%; max-height: 100%; display: none;object-fit: contain;"> -->
+          </div>
 
-          <input type="file" id="imageUpload" style="display:none;" onchange="previewImage();" />
+          <div class="preview" id="imagePreview">
+            <img src="" alt="プレビュー画像" style="max-width: 100%; max-height: 100%; min-width: 100%; min-width: 100%; display: none;">
+          </div>
+
+          <input type="file" id="imageUpload" style="display:none;" />
+
+          <button class="background_transparency" disabled>背景削除</button>
           
           <label for="imageUpload" class="image-upload-label" id="imageUploadLabel">
             <img class="hunger-button" src="../static/image/hunger.jpg" />
@@ -35,7 +42,12 @@
           
           <div class="input-group1">
             <div class="information-1">系統</div>
-            <input type="text" class="input-field1" />
+            <select class="input-field1">
+              <option value="tops">トップス</option>
+              <option value="pants">パンツ</option>
+              <option value="shoes">シューズ
+              </option>
+            </select>
           </div>
 
           <div class="input-group2">
@@ -64,12 +76,12 @@
           
           <div class="input-group5">
             <div class="information-5">価格</div>
-            <input type="text" class="input-field5" />
+            <input type="number" class="input-field5" />
           </div>
           
           <div class="input-group6">
             <div class="information-6">購入日</div>
-            <input type="text" class="input-field6" />
+            <input type="date" class="input-field6" />
           </div>
           
           <div class="input-group7">
@@ -85,6 +97,7 @@
         <!-- モーダルのHTML、初期状態は非表示にしておく -->
         <div class="modal-content">
           <div id="imageInfoModal" style="display:none;">
+            <img src="" alt="プレビュー画像" style="max-width: 100%; max-height: 100%; min-width: 100%; min-width: 100%; display: none;">
             <span class="close-button">&times;</span>
             <p id="modal-info-text">ここに情報が表示されます</p>
           </div>
